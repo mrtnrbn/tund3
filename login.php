@@ -89,6 +89,12 @@
 		
 	}
 	
+	// kas kasutaja tahab sisse logida
+	if ( isset($_POST["loginEmail"])&&
+		 isset($_POST["loginPassword"])&&
+		 !empty($_POST["loginEmail"]&&
+		 !empty($_POST["loginPassword"])
+	
 	
 
 ?>
