@@ -90,9 +90,9 @@
 	}
 	
 	// kas kasutaja tahab sisse logida
-	if ( isset($_POST["loginEmail"])&&
-		 isset($_POST["loginPassword"])&&
-		 !empty($_POST["loginEmail"]&&
+	if ( isset($_POST["loginEmail"])
+		 isset($_POST["loginPassword"])
+		 !empty($_POST["loginEmail"]
 		 !empty($_POST["loginPassword"])
 	
 	
@@ -156,6 +156,10 @@
 			
 			<input type="submit" value="Loo kasutaja">
 		
+		</form>
+		<form action="age">
+			  <input type="checkbox" name="age" value="age"> Olen vahemalt 18 aastat vana.<br>
+			  <input type="submit" value="Submit">
 		</form>
 
 	</body>
