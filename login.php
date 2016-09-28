@@ -1,7 +1,7 @@
 <?php 
 	
 	require("../../../config.php");
-	require("functions.php")
+	require("functions.php");
 	
 	//var_dump($_GET);
 	
@@ -84,28 +84,7 @@
 		
 		echo $password."<br>";
 		
-		//loon ühenduse
-		$database = "if16_romil";
-		
-		$mysqli = new mysqli($serverHost, $serverUsername, $serverPassword, $database);
-		
-		$stmt = $mysqli->prepare("INSERT INTO user_sample (email, password) VALUE (?, ?)");
-		
-		echo $mysqli->error;
-		
-		//asendan küsimärgid
-		//iga märgi kohta tuleb lisada üks täht - mis tüüpi muutuja on
-		// s - string
-		// i - int
-		// d - double
-		$stmt->bind_param("ss", $signupEmail, $password);
-		
-		//täida käsku
-		if ( $stmt->execute() ) {
-			echo "õnnestus";
-		} else {
-			echo "ERROR ".$stmt->error;
-		}
+		signup($signupEmail, $password);
 		
 		
 	}
